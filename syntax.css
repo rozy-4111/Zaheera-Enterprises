@@ -1,0 +1,138 @@
+body{
+    background: #eee;
+    font-family: sans-serif;
+}
+
+@font-face{
+    font-family: myfont;
+    src: url(beast-wars-cufonfonts\ \(1\).zip);    
+}
+
+.card{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    right: 50%;
+    width: 450px;
+    height: 250px;
+    margin: -200px;
+    float: left;
+    perspective: 900px;
+    align-items: center;
+
+}
+
+.content{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    transition: transform 2s;
+    transform-style: preserve-3d;
+    transition-delay: 0.2s;
+}
+
+.card:hover .content{
+    transform: rotateY(180deg);
+    transition: transform 2s;
+    transition-delay: 0.5s;
+}
+
+.front h1{
+    position: absolute;
+    margin-top: 20px;
+    height: 100px;
+    width: 100%;
+    padding: 10px;
+    text-align: center;
+    margin-bottom: 0px;
+    font-size: 60px;
+    letter-spacing: 0.1em;
+    top: 12%;
+    margin-left: 10px;
+    font-family: myfont;
+    color: #000;
+}
+
+.front{
+    position: relative;
+    display: grid;
+    place-items: center;
+    grid-template-rows: 1fr 1fr;
+    text-align: center;
+    overflow: hidden;
+
+}
+
+.front h2{
+    position: relative;
+    margin-top: 0px;
+    text-align: center;
+    place-items: center;
+    width: 100%;
+    height: 100%;
+    top: 23%;
+    font-size: 50px;
+    letter-spacing: 0.01em;
+    padding-top: 2px;
+    display: inline-block;
+    text-overflow: none;
+    line-height: 0;
+    margin-left: 10px;
+    text-decoration: underline #ff0000 4px;
+    color: #fff;
+    font-family: myfont;
+
+
+
+
+
+}
+
+.front, .back{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background: #fff;
+    
+    color: #000;
+    text-align: center;
+    
+    border-radius: 5px;
+    backface-visibility: hidden;
+
+}
+
+.back{
+    background-color: #000;
+    color: #fff;
+    transform: rotateY(180deg);
+    transition-delay: 0.5s;
+}
+
+.i-circle{
+    display: inline-block;
+    background-color: transparent;
+    border: 1.5px #fff solid;
+    color: #fcf7f7;
+    border-radius: 50%;
+    font-size: 9px;
+    line-height: 10px; /* set to same size as width, height */
+    width: 10px;
+    height: 10px;
+    text-align: center;
+    
+}
+
+.top{
+    position: relative;
+    top: 1000%;
+    margin-bottom: 600px;
+    font-size: large;
+}
+
+img{
+    position: relative;
+    width: 450px;
+    height: 250px;
+}
